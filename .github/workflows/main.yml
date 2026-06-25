@@ -33,7 +33,9 @@ jobs:
             - name: sonarqube analysis
 #create a step to run sonarqube analysis using the sonarscanner from maven
 #analysis will be done on the code and the results will be sent to sonarqube server
-              run: mvn sonar:sonar -Dsonar.projectkey=farragode97_myproject-04may-sonal -Dsonar.host.url=https://sonarcloud.io -Dsonar.organization=Farragode97 -Dsonar.token=$SONAR_TOKEN
+              run: mvn sonar:sonar -Dsonar.projectkey=Farragode97_myproject-04may-sonal -Dsonar.host.url=https://sonarcloud.io -Dsonar.organization=farragode97 -Dsonar.token=$SONAR_TOKEN
               env:
                 GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # This token is automatically created by GitHub Actions and can be used to authenticate with the GitHub API
                 SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}  # This token should be created in your GitHub repository settings and added as a secret
+
+
